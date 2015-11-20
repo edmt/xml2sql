@@ -2,3 +2,6 @@
 * text eof=lf
 
 *.go text eol=lf
+xml2sql
+.DS_Store
+*/.DS_Store
