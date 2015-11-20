@@ -6,7 +6,7 @@ import (
 
 func main() {
 	router := gin.Default()
-	router.Static("/assets", "./assets")
+	router.Static("/app", "./app")
 
 	// Listen and server on 0.0.0.0:8080
 	router.Run(":8080")
