@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="page-home">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <meta content="Convert your xml files to CFDi records. Easy, I hope..." name="description">
+  <title>xml2sql</title>
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link href="css/fonts.css" type="text/css" rel="stylesheet">
+  <link href="css/dropzone/dropzone.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+
+  <script src="//code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <script src="js/dropzone/dropzone.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <div class="gradient"></div>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/app">
+          <span class="logotype">
+            xml2sql
+          </span>
+        </a>
+      </div>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="banner">
+        <div class="container">
+          <div class="header">
+            <h2>XML &rarr; SQL & CSV</h2>
+            <p>Arrastra o selecciona los archivos. Simple.</p>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="empresaId" placeholder="Empresa ID">
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="origin" placeholder="Origen">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="features-list">
+    <div class="container">
+      <h3>Usa xml2sql para…</h3>
+      <div class="row">
+        <div class="col-sm-4">
+          <h4>Escribir en la tabla CFD</h4>
+          <p>Obtén un script con las sentencias SQL listas para ejecutarse.</p>
+        </div>
+        <div class="col-sm-4">
+          <h4>Preparar un envío al SAT</h4>
+          <p>Un CSV con la lista de RFCs y UUID para escribir en el pool de envío.</p>
+        </div>
+        <div class="col-sm-4">
+          <h4>Organizar los archivos</h4>
+          <p>Descarga los archivos adecuadamente renombrados y acomodados cronológicamente en directorios.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          Por Daniel Martínez
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
