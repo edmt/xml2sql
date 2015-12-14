@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func formatAsInsert(d Doc, empresaId, origen, hash string) string {
+func formatAsInsert(d Doc, name, refId, empresaId, origen, hash string) string {
 	const template = `
 insert into CFD (
     idInternal,        emisor,
@@ -47,7 +47,7 @@ values (
      %s,   %s,
      %s,   %s,
      %s,  '%s',
-    '%s', '%s',
+    '%s',  %s,
      %s,  '%s',
      %s,   %s,
      %s,   %s,
@@ -61,7 +61,7 @@ values (
 		strings.Replace(d.Fecha, "T", " ", -1), "null",
 		d.Folio, "null",
 		"null", d.Total,
-		d.NoCertificado, "/"+buildDirectoryPath(d)+"/"+buildFilename(d),
+		d.NoCertificado, "/"+buildDirectoryPath(d)+"/"+name,
 		"null", d.Receptor.Nombre,
 		d.Receptor.RFC, "null",
 		d.Tipo, d.Tipo,
@@ -69,7 +69,7 @@ values (
 		"1", "0",
 		empresaId, "null",
 		d.SubTotal, "null",
-		"null", "REPLACE(newid(),'-','')",
+		"null", refId,
 		d.Impuestos.Total, "null",
 		"0", d.Complemento.TimbreFiscalDigital.UUID,
 		strings.Replace(d.Complemento.TimbreFiscalDigital.FechaTimbrado, "T", " ", -1), origen,

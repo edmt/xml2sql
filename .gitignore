@@ -5,3 +5,6 @@
 xml2sql
 .DS_Store
 */.DS_Store
+input/
+tmp/
+output/
