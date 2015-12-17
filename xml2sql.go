@@ -15,9 +15,10 @@ import (
 )
 
 func processFromFileSystem() {
-	db := readCSV("input/empresas.csv")
+	db := readCSV("./input/empresas.csv")
+	log.Print(len(db))
 	log.Print(db)
-	matches, _ := filepath.Glob("input/*.zip")
+	matches, _ := filepath.Glob("./input/*.zip")
 	for _, zip := range matches {
 		processZip(zip, db)
 	}
